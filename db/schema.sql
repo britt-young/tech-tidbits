@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tidbits_db;
+
+CREATE DATABASE tidbits_db;
