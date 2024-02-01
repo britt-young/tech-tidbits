@@ -8,12 +8,15 @@
 <!-- Loop through each blog in the 'blogs' array -->
 {{#each blogs}}
 <div class="card my-2">
+
     <!-- Link to edit the specific blog post -->
     <a href="/editblog/{{id}}" class="col-sm-12 my-auto text-decoration-none text-reset">
+
         <!-- Card Header with Blog Title -->
         <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
             <h4>{{title}}</h4>
         </div>
+        
         <!-- Card Body with Blog Content -->
         <div class="card-body bg-danger bg-opacity-50 text-dark w-100 m-auto p-auto border border-dark border-top-0 border-4 rounded-bottom">
             <h5>{{content}}</h5>
