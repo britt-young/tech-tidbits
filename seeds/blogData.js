@@ -1,3 +1,4 @@
+// Sample data given to seed the database with
 [
     {
         "title":"Mhy MVC is so important",
