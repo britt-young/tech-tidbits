@@ -1,8 +1,9 @@
+// Require the necessary modules
 const router = require('express').Router()
 const {User, Comment, Blog} = require('../models')
 const withAuth = require('../utils/auth')
 
-
+// Homepage route
 router.get('/', async (req, res) => {
     try {
       let blogs = await Blog.findAll({
@@ -19,6 +20,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  // Dashboard route
   router.get('/dashboard', withAuth, async (req, res) => {
     try {
         let blogs = await Blog.findAll({
@@ -39,6 +41,7 @@ router.get('/', async (req, res) => {
     }
 })
 
+// Create a blog route
 router.get('/createblog', withAuth, async (req, res) => {
   try {
       let user = await User.findOne({
@@ -57,6 +60,7 @@ router.get('/createblog', withAuth, async (req, res) => {
   }
 })
 
+// Edit a blog route
 router.get('/editblog/:id', withAuth, async (req, res) => {
   try {
       let blog = await Blog.findOne({
@@ -77,6 +81,7 @@ router.get('/editblog/:id', withAuth, async (req, res) => {
   }
 })
 
+// View a blog route
 router.get('/blog/:id', async (req, res) => {
   try {
       let blog = await Blog.findOne({
@@ -105,6 +110,7 @@ router.get('/blog/:id', async (req, res) => {
   }
 })
 
+// Login route
   router.get('/login', (req, res) => {
     if (req.session.logged_in) {
       res.redirect('/');
@@ -114,4 +120,5 @@ router.get('/blog/:id', async (req, res) => {
     res.render('login');
   });
 
+  // Export router for main file usage
   module.exports = router
