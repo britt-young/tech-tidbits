@@ -1,7 +1,7 @@
 // Require the necessary modules
 const router = require('express').Router()
-const {User, Comment, Blog} = require('../../models')
-const withAuth = require('../../utlis/auth')
+const {User, Comment, Blog} = require('../models')
+const withAuth = require('../utlis/auth')
 
 // Homepage route
 router.get('/', async (req, res) => {
