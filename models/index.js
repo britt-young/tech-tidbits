@@ -1,7 +1,7 @@
 // Import Sequelize models
-const User = require('./User')
-const Blog = require('./Blog')
-const Comment = require('./Comment')
+const User = require('./User.js')
+const Blog = require('./Blog.js')
+const Comment = require('./Comment.js')
 
 // Define model associations/ relationships
 User.hasMany(Blog, {
