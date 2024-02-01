@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 // Define blog model
 class Blog extends Model {}
 
-// Set up fields and rules for blog model (initializes the Blog table)
+// Set up fields and rules for blog model (initializes the blog table)
 Blog.init(
   {
     id: {
