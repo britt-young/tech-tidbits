@@ -1,7 +1,7 @@
 // Importing Express's router and route modules
 const router = require("express").Router();
 const apiRoutes = require("./api");
-const viewRoutes = require("./viewRoutes");
+const viewRoutes = require("./ViewRoutes");
 
 // Registering API routes with '/api' prefix
 router.use("/api", apiRoutes);
