@@ -1,6 +1,8 @@
+// Require the necessary modules
 const router = require('express').Router()
 const {Comment} = require('../../models')
 
+// HTTP POST req for commenting on a blog
 router.post('/', async (req, res) => {
     try {
         const createComment = await Comment.create({
