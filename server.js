@@ -33,11 +33,13 @@ const sess = {
         db: sequelize
     })
 };
+// Apply the session middleware to the application
+app.use(session(sess));
 
 // Set up Handlebars as the view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', 'views');
+app.set('views', './views');
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
@@ -46,8 +48,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Apply the session middleware to the application
-app.use(session(sess));
+
 
 // Import and use application routes
 app.use(routes);
