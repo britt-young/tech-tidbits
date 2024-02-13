@@ -72,3 +72,8 @@ const signupFormHandler = async (event) => {
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
+  // Event listener for login button, executes loginFormHandler function when clicked
+  document
+            .querySelector('.login-form')
+            .addEventListener('submit', loginFormHandler);
