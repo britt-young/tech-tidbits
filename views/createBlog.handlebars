@@ -12,37 +12,37 @@
   <div id="createPost" class="card my-3">
 
     <!-- Card Header -->
-    <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
+    <div class="card-header text-bg-light d-flex justify-content-between align-items-center">
       <h4>Create New Post</h4>
     </div>
 
     <!-- Card Body for Form -->
-    <div class="card-body text-center bg-info bg-opacity-50 text-dark w-100 m-auto p-auto border border-dark border-top-0 border-4 rounded-bottom">
+    <div class="card-body text-center-bg-light w-100 m-auto p-auto border border-dark border-top-0 border-1 rounded-bottom">
 
       <!-- Blog Creation Form -->
       <form id="createBlog">
 
         <!-- Input for Post Title -->
-        <div class="mb-3 mx-2 text-start text-dark">
+        <div class="mb-3 mx-2 text-start text-bg-light">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" name="title">
         </div>
 
         <!-- Text area for Post Content -->
-        <div class="mb-3 mx-2 text-start text-dark">
+        <div class="mb-3 mx-2 text-start text-bg-light">
           <label for="content" class="form-label">Content</label>
           <textarea type="text" class="form-control" name="content"></textarea>
         </div>
 
         <!-- Submit Button for Form -->
-        <button type="submit" class="btn btn-primary w-25">Create</button>
+        <button type="submit" class="btn btn-light w-25">Create</button>
       </form>
     </div>
   </div>
 </div>
 
 <!-- Button to Trigger New Post Creation -->
-<button id="getPost" type="button" class="fs-4 py-2 px-3 text-light bg-primary rounded fixed-bottom w-25 mx-auto mb-2">+ New Post</button>
+<button id="getPost" type="button" class="fs-4 py-2 px-3 btn btn-light rounded fixed-bottom w-25 mx-auto mb-2">+ New Post</button>
 
 <!-- Link to JavaScript file for handling post creation -->
 <script src="../public/js/create.js"></script>

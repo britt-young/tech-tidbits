@@ -6,10 +6,10 @@
 </style>
 
 <!-- Blog Post Card -->
-<div class="card my-2">
+<div class="card text-bg-light my-2">
 
   <!-- Blog Post Header -->
-  <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
+  <div class="card-header d-flex justify-content-between align-items-center">
 
     <!-- Blog Title -->
     <h4>{{blog.title}}</h4>
@@ -19,7 +19,7 @@
   </div>
 
   <!-- Blog Post Body -->
-  <div class="card-body bg-danger bg-opacity-50 text-dark w-100 m-auto p-auto border border-dark border-top-0 border-4 rounded-bottom">
+  <div class="card-body border-top-0 border-1 rounded-bottom">
 
     <!-- Blog Content -->
     <h5>{{blog.content}}</h5>
@@ -31,7 +31,7 @@
 <div class="card my-2">
 
   <!-- Comment Body -->
-  <div class="card-body bg-danger bg-opacity-50 text-dark w-100 mx-auto pt-2 px-4 border border-dark border-top-5 border-5 rounded-bottom rounded-top">
+  <div class="card-body text-bg-light border-top-1 border-1 rounded-bottom rounded-top">
 
     <!-- Comment Content -->
     <h5>{{content}}</h5>
@@ -51,7 +51,7 @@
     </div>
 
     <!-- Form Body -->
-    <div class="card-body bg-info bg-opacity-50 text-dark w-100 mx-auto pt-2 px-4 border border-dark border-top-0 border-4 rounded-bottom">
+    <div class="card-body text-bg-light w-100 mx-auto pt-2 px-4 border border-dark border-top-0 border-1 rounded-bottom">
 
       <!-- Comment Form -->
       <form id="comment" data-blogid="{{blog.id}}">
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <button type="submit" class="btn btn-light w-100">Submit</button>
       </form>
     </div>
 </div>

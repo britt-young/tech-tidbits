@@ -7,13 +7,13 @@
 
 <!-- Loop through each blog post in the 'blogs' array -->
 {{#each blogs}}
-<div class="card my-3">
+<div class="card text-bg-light my-3">
 
     <!-- Clickable area linking to the blog post's detailed view -->
     <a href="/blog/{{id}}" class="text-decoration-none text-reset">
 
         <!-- Card header containing the blog title/author information -->
-        <div class="card-header navbar-dark bg-dark d-flex justify-content-between align-items-center">
+        <div class="card-header navbar-dark d-flex justify-content-between align-items-center">
             <!-- Blog title -->
             <h4>{{title}}</h4>
 
@@ -23,7 +23,7 @@
 
         <!-- Card body containing summary of blog contents -->
         <div
-            class="card-body bg-danger bg-opacity-50 text-dark w-100 m-auto p-auto border border-dark border-top-0 border-4 rounded-bottom">
+            class="card-body w-100 m-auto p-auto border border-dark border-top-0 border-0 rounded-bottom">
 
             <!-- Blog content -->
             <h5>{{content}}</h5>
