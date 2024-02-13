@@ -70,10 +70,10 @@ const signupFormHandler = async (event) => {
 };
 // Event listener for signup button, executes signupFormHandler function when clicked
 document
-  .querySelector('.signup-form')
+  .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
 
-  // Event listener for login button, executes loginFormHandler function when clicked
-  document
-            .querySelector('.login-form')
-            .addEventListener("submit", loginFormHandler);
+// Event listener for login button, executes loginFormHandler function when clicked
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);

@@ -33,9 +33,6 @@ const sess = {
     })
 };
 
-// Apply the session middleware to the application
-app.use(session(sess));
-
 // Set up Handlebars as the view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -47,6 +44,9 @@ app.use(express.static('public'));
 // Middleware for parsing JSON and URL-encoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Apply the session middleware to the application
+app.use(session(sess));
 
 // Import and use application routes
 app.use(routes);
