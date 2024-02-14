@@ -23,16 +23,16 @@ You’ll also need the dotenv package links to an external site. to use environm
 he express-sessionLinks to an external site. package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
 
 Homepage
-[homepage](public/img/home-demo.png)  
+![homepage](public/img/home-demo.png)  
 
 Login
-[Login](public/img/login-demo.png)
+![Login](public/img/login-demo.png)
 
 Add Post
-[Add Post](public/img/add-post-demo.png)
+![Add Post](public/img/add-post-demo.png)
 
 Comment
-[Comment](public/img/comment-demo.png)
+![Comment](public/img/comment-demo.png)
 
 ## Credits
 
