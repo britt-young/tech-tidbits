@@ -16,17 +16,23 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
  You’ll need to use the express-handlebarsLinks to an external site. package to use Handlebars.js for your Views, use the MySQL2Links to an external site. and SequelizeLinks to an external site. packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
 
-You’ll also need the dotenv packageLinks to an external site. to use environment variables, the bcrypt packageLinks to an external site. to hash passwords, and the express-sessionLinks to an external site. and connect-session-sequelizeLinks to an external site. packages to add authentication
+You’ll also need the dotenv package links to an external site. to use environment variables, the bcrypt packageLinks to an external site. to hash passwords, and the express-sessionLinks to an external site. and connect-session-sequelizeLinks to an external site. packages to add authentication
 
 ## Usage
 
 he express-sessionLinks to an external site. package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Homepage
+[homepage](public/img/home-demo.png)  
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Login
+[Login](public/img/login-demo.png)
+
+Add Post
+[Add Post](public/img/add-post-demo.png)
+
+Comment
+[Comment](public/img/comment-demo.png)
 
 ## Credits
 
