@@ -38,6 +38,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
-    "node-modules": "^1.0.1"
+    "node-modules": "^1.0.1",
+    "sessions": "^0.0.2-7"
   }
 }
