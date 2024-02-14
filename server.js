@@ -4,7 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const helpers = require('./utlis/helpers');
+const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -19,19 +19,22 @@ const hbs = exphbs.create({ helpers });
 
 // Session configuration
 const sess = {
-    secret: 'Super secret secret',                      // Secret for signing the session ID cookie
+    secret: 'Super secret secret', // Secret for signing the session ID cookie
     cookie: {
-        maxAge: 300000,                                 // Cookie expiration time in milliseconds
-        httpOnly: true,                                 // Prevents client-side JavaScript from reading the cookie
-        secure: false,                                  // True if using HTTPS
-        sameSite: 'strict',                             // Strict same-site policy to mitigate CSRF attacks
+        maxAge: 300000, // Cookie expiration time in milliseconds
+        httpOnly: true, // Prevents client-side JavaScript from reading the cookie
+        secure: false, // True if using HTTPS
+        sameSite: 'strict', // Strict same-site policy to mitigate CSRF attacks
     },
-    resave: false,                                      // Avoids resaving sessions that haven't been modified
-    saveUninitialized: true,                            // Saves new sessions even if not modified
-    store: new SequelizeStore({                         // Session store using Sequelize
+    resave: false, // Avoids resaving sessions that haven't been modified
+    saveUninitialized: true, // Saves new sessions even if not modified
+    store: new SequelizeStore({ // Session store using Sequelize
         db: sequelize
     })
 };
+
+// Apply the session middleware to the application
+app.use(session(sess));
 
 // Set up Handlebars as the view engine
 app.engine('handlebars', hbs.engine);
@@ -44,9 +47,6 @@ app.use(express.static('public'));
 // Middleware for parsing JSON and URL-encoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Apply the session middleware to the application
-app.use(session(sess));
 
 // Import and use application routes
 app.use(routes);
