@@ -1,5 +1,6 @@
 # tech-tidbits
-(Check out the deployed application [here](https://tech-tidbits-8bd44caf995d.herokuapp.com/)
+Check out the deployed application [here](https://tech-tidbits-8bd44caf995d.herokuapp.com/)
+
 A CMS-style blog site, where devs can publish and comment on blog posts. Deployed through Heroku using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication
 ```
 AS A developer who writes about tech,
